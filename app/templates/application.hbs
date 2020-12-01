@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<h2 id="title">
+  Welcome to Ember
+</h2>
+<p>
+  foo 1: {{foo.state}}, {{if foo.value foo.value (if foo.isLoading '...' (if foo.isError 'yikes'))}}
+</p>
+<p>
+  foo 2: {{foo.state}}, {{if foo.value foo.value (if foo.isLoading '...' (if foo.isError 'yikes'))}}
+</p>
+{{#if this.foo.isError}}
+  {{#if this.canRetry}}
+    <button {{on "click" this.retry}}>
+      RETRY
+    </button>
+  {{/if}}
+{{/if}}

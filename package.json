@@ -55,5 +55,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "tracked-toolbox": "^1.2.1"
   }
 }
